@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Data
 @Builder
@@ -27,7 +26,7 @@ public class Employee {
     @Column(name = "address")
     private String address;
 
-    @OneToOne(cascade = CascadeType.REFRESH)
+    @ManyToOne
     @JoinColumn(name = "department_id", referencedColumnName = "id")
     private Department department;
 

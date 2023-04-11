@@ -7,5 +7,4 @@ spring:
 
   jpa:
     hibernate:
-      generate-ddl: true
-      ddl-auto: create-only
+      ddl-auto: update
