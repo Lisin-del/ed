@@ -1,4 +1,4 @@
-package ru.lisin.labwork1lmm.configs;
+package ru.lisin.labwork1lmm.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
