@@ -10,7 +10,6 @@ public class MainController {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String getLoginPage() {
-        System.out.println("controller was invoked");
-        return "Login";
+        return "Home";
     }
 }

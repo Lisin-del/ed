@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.lisin.labwork1lmm.security.UserRole;
 
+import java.util.List;
+import java.util.Set;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,9 +20,6 @@ public class User {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "full_name")
-    private String fullName;
-
     @Column(name = "login")
     private String login;
 
@@ -30,5 +30,5 @@ public class User {
     private String email;
 
     @Column(name = "role")
-    private UserRole userRole;
+    private UserRole role;
 }
