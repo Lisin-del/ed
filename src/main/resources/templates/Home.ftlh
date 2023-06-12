@@ -6,7 +6,7 @@
     <title>Login</title>
 </head>
 <body>
-<h1>Hello from Spring Security!</h1>
+<h3>Hello from Spring Security!</h3>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

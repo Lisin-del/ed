@@ -19,9 +19,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
+    // lisinlogin/lisinpassword
     @Override
     public UserDetails loadUserByUsername(String userLogin) throws UsernameNotFoundException {
         User user = userService.getUser(userLogin);
