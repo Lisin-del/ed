@@ -4,10 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.lisin.labwork1lmm.security.UserRole;
-
-import java.util.List;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -30,5 +26,5 @@ public class User {
     private String email;
 
     @Column(name = "role")
-    private UserRole role;
+    private String role;
 }

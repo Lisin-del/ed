@@ -6,7 +6,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.lisin.labwork1lmm.entities.User;
 import ru.lisin.labwork1lmm.security.UserRole;
@@ -20,6 +19,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private UserService userService;
 
     // lisinlogin/lisinpassword
+    // $2a$12$l//D4fE2CPgmnVKIQN5r9.hjlKVRkLRCQXCx93KspQQQq5OXWPFgS
     @Override
     public UserDetails loadUserByUsername(String userLogin) throws UsernameNotFoundException {
         User user = userService.getUser(userLogin);
