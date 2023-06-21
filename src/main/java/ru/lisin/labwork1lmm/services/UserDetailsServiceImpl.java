@@ -20,11 +20,15 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     // lisinlogin/lisinpassword
     // $2a$12$l//D4fE2CPgmnVKIQN5r9.hjlKVRkLRCQXCx93KspQQQq5OXWPFgS
+
+    // admin/admin
+    // $2a$12$F/n8FexuxbH4w.QzksiX1.LEebcgmbOVK9ZlH/4DWNHLe8HeJsTGS
     @Override
     public UserDetails loadUserByUsername(String userLogin) throws UsernameNotFoundException {
         User user = userService.getUser(userLogin);
         Set<GrantedAuthority> userRoles = new HashSet<>();
-        userRoles.add(new SimpleGrantedAuthority(UserRole.USER.name()));
+        UserRole userRole = UserRole.valueOf(user.getRole());
+        userRoles.add(new SimpleGrantedAuthority(userRole.name()));
         UserDetails userDetails = new org.springframework.security.core.userdetails.User(
                 user.getLogin(),
                 user.getPassword(),
